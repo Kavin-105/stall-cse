@@ -1,7 +1,7 @@
 import fmain from '../assets/fmain.jpg'
 import regular from '../assets/fish/regular.jpg'
 import jilebi from '../assets/fish/jilebi.jpg'
-import chilli from '../assets/fish/Chilli-fish.jpg'
+import chilli from '../assets/fish/Chilli-Fish.jpg'
 import paarai from '../assets/fish/paarai.jpg'
 export const fish = {
     id: 'fish',
