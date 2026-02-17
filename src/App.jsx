@@ -33,7 +33,11 @@ const App = () => {
       <section className="contact-strip fade-in">
         <div className="contact-info">
           <span className="contact-label">Contact for Orders:</span>
-          <a href="tel:+918270274586" className="contact-link">+91 82702 74586</a>
+          <div className="contact-links">
+            <a href="tel:+918270274586" className="contact-link">+91 82702 74586</a>
+            <span className="separator">|</span>
+            <a href="tel:+919876543210" className="contact-link">+91 98765 43210</a>
+          </div>
         </div>
       </section>
 
@@ -46,6 +50,7 @@ const App = () => {
               className="category-card fade-in"
               onClick={() => openCategory(category)}
             >
+              {category.preOrder && <div className="pre-order-badge">Pre-orders</div>}
               <img src={category.image} alt={category.name} />
               <div className="card-overlay">
                 <h3>{category.name}</h3>
@@ -65,17 +70,32 @@ const App = () => {
               <h2>{selectedCategory.name}</h2>
               <p>{selectedCategory.description}</p>
             </div>
-            <div className="items-list">
+            <div className={`items-list ${selectedCategory.id === 'combos' ? 'combos-only' : ''}`}>
               {selectedCategory.items.map((item) => (
-                <div key={item.id} className="menu-item fade-in">
-                  {item.preOrder && <div className="pre-order-badge">Pre-order</div>}
-                  <img src={item.image} alt={item.name} />
-                  <div className="item-details">
-                    <div className="item-header">
-                      <h4>{item.name}</h4>
-                      <span className="price">{item.price}</span>
+                <div key={item.id} className={`menu-item fade-in ${selectedCategory.id === 'combos' ? 'no-image' : ''}`}>
+                  {item.preOrder && <div className="pre-order-badge">Pre-orders</div>}
+                  {selectedCategory.id !== 'combos' && (
+                    <div className="item-image-container">
+                      <img src={item.image} alt={item.name} />
                     </div>
-                    <p>{item.description}</p>
+                  )}
+                  <div className="item-details">
+                    <div className="item-main-content">
+                      <h4>{item.name}</h4>
+                      {selectedCategory.id !== 'combos' && <p className="item-description">{item.description}</p>}
+                    </div>
+                    <div className="item-footer">
+                      <div className="price-container">
+                        {item.old && item.new ? (
+                          <>
+                            <span className="old-price">{item.old}</span>
+                            <span className="new-price">{item.new}</span>
+                          </>
+                        ) : (
+                          <span className="price">{item.price || item.old || item.new}</span>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -84,15 +104,26 @@ const App = () => {
         </div>
       )}
 
+      {/* Pre-order Information */}
+      <section className="pre-order-info fade-in">
+        <div className="info-content">
+          <h3>Pre-orders</h3>
+          <p>
+            To ensure the highest quality and freshness, certain specialty items marked as
+            <strong> Pre-orders</strong> require advance booking. Please place your orders
+            at least <strong>2-4 hours</strong> in advance for these delicacies.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="site-footer fade-in">
-        <div className="footer-content">
-          <p className="copyright">&copy; 2026 Savory Delights. All rights reserved.</p>
-          <div className="member-list">
-            <span>Managed by:</span>
-            <p>Kavin R • Manojh B • Manedeep M • Jayaraj M</p>
-          </div>
+
+        <div className="member-list">
+          <span>Managed by:</span>
+          <p>CSE - B Boyss</p>
         </div>
+
       </footer>
     </div>
   );
