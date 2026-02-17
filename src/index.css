@@ -299,7 +299,7 @@ h3 {
 .pre-order-badge {
   position: absolute;
   top: 12px;
-  left: 12px;
+  left: 1px;
   background: var(--primary-color);
   color: #000;
   padding: 4px 10px;
