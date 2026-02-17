@@ -36,7 +36,7 @@ const App = () => {
           <div className="contact-links">
             <a href="tel:+918270274586" className="contact-link">+91 82702 74586</a>
             <span className="separator">|</span>
-            <a href="tel:+919876543210" className="contact-link">+91 98765 43210</a>
+            <a href="tel:+919876543210" className="contact-link">+91 97906 55699</a>
           </div>
         </div>
       </section>
