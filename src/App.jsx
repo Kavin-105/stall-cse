@@ -576,7 +576,6 @@ const CSS = `
   @media (max-width: 420px) {
     .mn-hero {
       height: 50vh; min-height: 360px;
-      width:50vw;
     }
     .mn-hero-content {
       padding: 0 5vw 32px;
@@ -588,10 +587,6 @@ const CSS = `
       gap: 12px;
     }
     .mn-contact-sep { display: none; }
-    .mn-hero-img{
-      width:50%;
-      height:30%;
-    }
   }
   @media (min-width: 1400px) {
     .mn-hero-img {
@@ -645,7 +640,7 @@ const App = () => {
     <div>
       {/* ── NAV ── */}
       <nav className="mn-nav">
-        <span className="mn-logo">Savory <em>Delights</em></span>
+        <span className="mn-logo">Pasikudhu <em>Padaiyappa</em></span>
         <span className="mn-nav-tag">CSE — B Boyss</span>
       </nav>
 
@@ -672,8 +667,8 @@ const App = () => {
             Fresh &amp; Authentic
           </div>
           <h1 className="mn-hero-title">
-            Savory<br />
-            <i>Delights.</i>
+            Pasikudhu<br />
+            <i>Padaiyappa.</i>
           </h1>
         </div>
       </section>
