@@ -11,8 +11,8 @@ export const kebab = {
     description: 'Smoky, charred, and tender kebabs.',
     image: kmain,
     items: [
-        { id: 1, name: 'Chicken Kebab', old: '₹100', new: '₹80', description: 'Chicken Kebab 4 pieces in stick', image: chicken },
-        { id: 2, name: 'Chicken Mint Kebab', old: '₹120', new: '₹95', description: 'Chicken Mint Kebab 4 pieces in stick', image: mint },
+        { id: 1, name: 'Chicken Kebab', price: '₹80', description: 'Chicken Kebab 4 pieces in stick', image: chicken },
+        { id: 2, name: 'Chicken Mint Kebab', price: '₹95', description: 'Chicken Mint Kebab 4 pieces in stick', image: mint },
         { id: 3, name: 'Chicken Pineapple Kebab', price: '₹110', description: 'Chicken Pineapple Kebab 4 pieces in stick', image: pineapple },
         { id: 4, name: 'Veg Kebab', price: '₹65', description: 'Veg Kebab 4 pieces in stick', image: veg },
         { id: 5, name: 'Chicken Kebab with roti', price: '₹95', description: 'Kebab stuffed in roti with onion , tomato and mayonnaise', image: roti },

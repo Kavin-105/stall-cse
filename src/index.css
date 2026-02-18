@@ -530,6 +530,37 @@ h3 {
 }
 
 
+/* Parcel Charge Tag */
+.parcel-charge-tag {
+  background: var(--primary-color);
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 2rem auto;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.parcel-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .parcel-charge-tag {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    margin: 1.5rem auto;
+  }
+}
+
 /* Footer Section */
 .site-footer {
   margin-top: 1rem;

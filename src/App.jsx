@@ -36,6 +36,8 @@ const App = () => {
           <div className="contact-links">
             <a href="tel:+918270274586" className="contact-link">+91 82702 74586</a>
             <span className="separator">|</span>
+            <a href="tel:+919876543210" className="contact-link">+91 63836 48034</a>
+            <span className="separator">|</span>
             <a href="tel:+919876543210" className="contact-link">+91 97906 55699</a>
           </div>
         </div>
@@ -115,6 +117,12 @@ const App = () => {
           </p>
         </div>
       </section>
+
+      {/* Parcel Charge Tag */}
+      <div className="parcel-charge-tag fade-in">
+        <span className="parcel-icon">📦</span>
+        <span className="parcel-text">Parcel charge 10/- <sub>(for all the items)</sub></span>
+      </div>
 
       {/* Footer */}
       <footer className="site-footer fade-in">
