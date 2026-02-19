@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { menuData } from './categories/menuData';
 import banner from './assets/banner.jpg';
+import whatsappIcon from './assets/whatsapp.png';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -32,13 +33,13 @@ const App = () => {
       {/* Contact Section */}
       <section className="contact-strip fade-in">
         <div className="contact-info">
-          <span className="contact-label">Contact for Orders:</span>
+          <span className="contact-label">Whatsapp/Contact for Orders:</span>
           <div className="contact-links">
             <a href="tel:+918270274586" className="contact-link">+91 82702 74586</a>
             <span className="separator">|</span>
-            <a href="tel:+919876543210" className="contact-link">+91 63836 48034</a>
+            <a href="tel:+916383648034" className="contact-link">+91 63836 48034</a>
             <span className="separator">|</span>
-            <a href="tel:+919876543210" className="contact-link">+91 97906 55699</a>
+            <a href="tel:+919790655699" className="contact-link">+91 97906 55699</a>
           </div>
         </div>
       </section>
@@ -133,6 +134,19 @@ const App = () => {
         </div>
 
       </footer>
+
+      {/* WhatsApp Floating Button - Only on main page */}
+      {!selectedCategory && (
+        <a 
+          href="https://wa.me/918270274586" 
+          className="whatsapp-float-btn" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          title="Chat on WhatsApp"
+        >
+          <img src={whatsappIcon} alt="WhatsApp" />
+        </a>
+      )}
     </div>
   );
 };
